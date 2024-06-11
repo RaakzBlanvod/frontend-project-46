@@ -23,3 +23,10 @@ test('Flat JSON', () => {
     expect(genDiff(file1, file2)).toEqual(referenceFlatFiles);
 })
 
+test('Flat YAML', () => {
+    const file1 = getFixturePath('file1.yml');
+    const file2 = getFixturePath('file2.yml');
+
+    expect(genDiff(file1, file2)).toEqual(referenceFlatFiles);
+})
+

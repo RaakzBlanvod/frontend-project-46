@@ -2,3 +2,4 @@
 [![Actions Status](https://github.com/RaakzBlanvod/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/RaakzBlanvod/frontend-project-46/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/5cf4e5cb35e705ad159c/maintainability)](https://codeclimate.com/github/RaakzBlanvod/frontend-project-46/maintainability)
 [![asciicast](https://asciinema.org/a/MAsWcrAqHsyiGwjqq9kpPArm5.svg)](https://asciinema.org/a/MAsWcrAqHsyiGwjqq9kpPArm5)
+[![asciicast](https://asciinema.org/a/wMVvTTdZyxWNmuN5ewKBnvJNC.svg)](https://asciinema.org/a/wMVvTTdZyxWNmuN5ewKBnvJNC)
