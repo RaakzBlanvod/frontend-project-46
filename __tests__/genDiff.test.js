@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 
 import genDiff from "../src/index.js"
 import {expect, test} from '@jest/globals';
+import makeFormat from '../src/formatters/index.js';
 
 /* eslint-disable */
 const __filename = fileURLToPath(import.meta.url);

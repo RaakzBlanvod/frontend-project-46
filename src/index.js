@@ -1,35 +1,13 @@
-import path from 'path';
-import fs from 'fs';
-import _ from 'lodash';
+import getDifferentObject from './utils.js';
+import makeFormat from './formatters/index.js';
 import getData from './parses.js';
 
-const readFile = (filepath) => {
-  const pathF = path.resolve(process.cwd(), filepath);
-  return JSON.parse(fs.readFileSync(pathF, 'utf-8'));
-};
+function genDiff(filepath1, filepath2, format = 'stylish') {
+  const dataFile1 = getData(filepath1);
+  const dataFile2 = getData(filepath2);
+  const dataDiff = getDifferentObject(dataFile1, dataFile2);
+  format = makeFormat(dataDiff);
+  return format;
+}
 
-const gendiff = (filepath1, filepath2) => {
-  const data1 = getData(filepath1);
-  const data2 = getData(filepath2);
-
-  const keys = (_.union(_.keys(data1), _.keys(data2))).sort();
-  const diffObj = keys.map((key) => {
-    if (_.has(data1, key) && !_.has(data2, key)) {
-      return `  - ${key}: ${data1[key]}`;
-    }
-
-    if (_.has(data2, key) && !_.has(data1, key)) {
-      return `  + ${key}: ${data2[key]}`;
-    }
-
-    if (data1[key] !== data2[key]) {
-      return `  - ${key}: ${data1[key]}\n  + ${key}: ${data2[key]}`;
-    }
-
-    return `    ${key}: ${data1[key]}`;
-  });
-
-  return `{\n${diffObj.join('\n')}\n}`;
-};
-
-export default gendiff;
+export default genDiff;
