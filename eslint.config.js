@@ -6,7 +6,9 @@ import { FlatCompat } from "@eslint/eslintrc";
 import pluginJs from "@eslint/js";
 
 // mimic CommonJS variables -- not needed if using CommonJS
+/* eslint-disable */
 const __filename = fileURLToPath(import.meta.url);
+/* eslint-enable */
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({baseDirectory: __dirname, recommendedConfig: pluginJs.configs.recommended});
 
@@ -15,9 +17,11 @@ export default [
   ...compat.extends("airbnb"),
   {"rules":
   {"no-console": "off",
-  "import/extensions": ["error", "ignorePackages", {
-    "js": "always"
-  }]
+    "import/extensions": ["error", "ignorePackages", {
+      "js": "always"
+    }],
+    "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off"
   }
   }
 ];

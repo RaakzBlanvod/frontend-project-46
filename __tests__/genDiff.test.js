@@ -5,7 +5,9 @@ import { fileURLToPath } from "url";
 import genDiff from "../src/index.js"
 import {expect, test} from '@jest/globals';
 
+/* eslint-disable */
 const __filename = fileURLToPath(import.meta.url);
+/* eslint-enable */
 const __dirname = path.dirname(__filename);
 
 const getFixturePath = (filePath) => path.join(__dirname, '..', 

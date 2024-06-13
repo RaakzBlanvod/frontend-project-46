@@ -4,7 +4,7 @@ install:
 lint: 
 	npx eslint .
 
-lint: 
+lint-fix: 
 	npx eslint . --fix
 
 test:
