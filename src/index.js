@@ -1,6 +1,6 @@
 import makeFormat from './formatters/index.js';
 import { getDifferentObject, readFile, getExtension } from './utils.js';
-import parse from './parsers.js';
+import parse from './parses.js';
 
 function genDiff(filepath1, filepath2, format = 'stylish') {
   const dataFile1 = readFile(filepath1);
