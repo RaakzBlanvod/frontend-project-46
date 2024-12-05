@@ -1,29 +1,21 @@
 name: build
 
 on:
-
   - push
 
-jobs:
-
+jobs: 
   build:
-  
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Clothing repos
-
         uses: actions/checkout@v3
 
       - name: Setup Nodejs
-
         uses: actions/setup-nodejs@v3
 
       - name: Install dependecies
-
         run: make install
 
       - name: Make lint
-
         run: make lint

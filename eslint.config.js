@@ -41,6 +41,11 @@ export default [
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'no-underscore-dangle': 'off',
   },
+    settings: {
+      react: {
+        version: '18.3.1',
+      },
+    },
   },
 
 ];
